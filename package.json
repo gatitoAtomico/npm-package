@@ -1,0 +1,19 @@
+{
+  "name": "npm-package",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000n\u0000p\u0000m\u0000-\u0000p\u0000a\u0000c\u0000k\u0000a\u0000g\u0000e\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "20.2.3",
+    "@types/react": "18.2.7",
+    "antd": "^5.20.0",
+    "react": "^18.2.0",
+    "typescript": "5.0.4"
+  }
+}
