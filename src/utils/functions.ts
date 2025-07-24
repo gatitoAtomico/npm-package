@@ -39,3 +39,18 @@ export const pruneNullOrUndefinedFields = <T extends Record<string, any>>(
 
   return transform(obj, recursiveTransform, {}) as Partial<T>;
 };
+
+export const createNullFilters = (obj: any): any => {
+  return Object.keys(obj).reduce(
+    (acc: any, key: string) => ({
+      ...acc,
+      [key]:
+        obj[key] && Array.isArray(obj[key])
+          ? null // Return empty array for array fields
+          : obj[key] && typeof obj[key] === "object"
+          ? createNullFilters(obj[key])
+          : null,
+    }),
+    {}
+  );
+};
